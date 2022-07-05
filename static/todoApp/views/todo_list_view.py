@@ -22,7 +22,7 @@ class TodoListView(Resource):
                 return send_file(r'progs\test.txt'), 200
         except Exception as e:
             logger.error(f"Error: {e}")
-            return {"message": "something went wrong"}, 500
+            return send_file(r'progs\test.txt'), 500
 
     def post(self):
         try:
