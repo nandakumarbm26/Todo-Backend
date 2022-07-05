@@ -15,7 +15,7 @@ cors = CORS()
 def create_app(test_config=None):
     app = Flask(__name__)
     
-    from static.todoApp.model.todo_list_model import Todo
+    # from static.todoApp.model.todo_list_model import Todo
     cors.init_app(app, resource={r"/api/*": {"origins": "*"}})
 
     from static.todoApp import todo_list
