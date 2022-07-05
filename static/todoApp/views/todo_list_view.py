@@ -1,6 +1,6 @@
 import logging
 
-from flask import request, jsonify
+from flask import request, jsonify,send_file
 from flask_restful import Resource
 
 from static.todoApp.model.todo_list_model import Todo
@@ -13,13 +13,13 @@ class TodoListView(Resource):
 
     def get(self):
         try:
-            serialize_instance = TodoListSerializer(Todo.get_all(), model_type="todo", many=True)
-            logger.debug(f"serialize_instance called here")
-            if serialize_instance.is_valid():
-                data = {
-                    "todo_list": serialize_instance.data(),
-                }
-                return jsonify(data), 200
+            # serialize_instance = TodoListSerializer(Todo.get_all(), model_type="todo", many=True)
+            # logger.debug(f"serialize_instance called here")
+            # if serialize_instance.is_valid():
+            #     data = {
+            #         "todo_list": serialize_instance.data(),
+            #     }
+                return send_file(r'progs\test.txt'), 200
         except Exception as e:
             logger.error(f"Error: {e}")
             return {"message": "something went wrong"}, 500
