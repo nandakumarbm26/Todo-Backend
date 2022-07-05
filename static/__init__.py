@@ -1,12 +1,10 @@
 from flask import Flask
 from flask_cors import CORS
 from flask_migrate import Migrate
-from flask_sqlalchemy import SQLAlchemy
 import logging
 
 from static.logger_config import custom_logger
 
-db = SQLAlchemy()
 migrate = Migrate()
 
 logger = logging.getLogger('gunicorn.error')
