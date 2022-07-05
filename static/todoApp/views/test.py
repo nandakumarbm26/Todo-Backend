@@ -1,0 +1,1 @@
+print(open(r'progs\test.txt'))
