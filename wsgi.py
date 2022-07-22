@@ -9,25 +9,37 @@ CORS(app)
 def helloWorld():
     return jsonify( {"data":"helloworld"})
 
-@app.route("/download4",methods=['GET'])
+@app.route("/tts",methods=['GET'])
 def download4():
-    return send_file(r'prog4.c')
+    return send_file(os.path.join('progs','tts.txt'))
 
-@app.route("/download7",methods=['GET'])
+@app.route("/calc",methods=['GET'])
 def download7():
-    return send_file(r'prog7.c')
+    return send_file(os.path.join('progs','calc.txt'))
 
-@app.route("/download8",methods=['GET'])
+@app.route("/dial",methods=['GET'])
 def download8():
-    return send_file(r'prog8.c')
+    return send_file(os.path.join('progs','dial.txt'))
 
-@app.route("/download9",methods=['GET'])
+@app.route("/login",methods=['GET'])
 def download9():
-    return send_file(r'prog9.c')
+    return send_file(os.path.join('progs','login.txt'))
 
-@app.route("/download",methods=['GET'])
+@app.route("/json",methods=['GET'])
 def download():
-    return send_file(r'txt.t')
+    return send_file(os.path.join('progs','json.txt'))
+
+@app.route("/counter",methods=['GET'])
+def download1():
+    return send_file(os.path.join('progs','counter.txt'))
+
+@app.route("/vc",methods=['GET'])
+def download2():
+    return send_file(os.path.join('progs','vc.txt'))
+
+@app.route("/wallpaper",methods=['GET'])
+def download3():
+    return send_file(os.path.join('progs','wall.txt'))
 
 @app.route('/list',methods=['GET'])
 def passport():

@@ -1,0 +1,430 @@
+
+
+login.xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_username_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/login_password_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_username"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Username" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_password_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:endIconCheckable="true"
+        app:endIconMode="password_toggle"
+        app:layout_constraintBottom_toTopOf="@+id/logInButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_username_layout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Password"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/logInButton"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="Login"
+        app:layout_constraintBottom_toTopOf="@+id/login_to_signup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_password_layout" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/login_to_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="Sign Up"
+        android:textColor="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logInButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+signup.xml
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignupActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/signUp_username_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/signUp_password_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/signUp_username"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Username" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/signUp_password_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:endIconCheckable="true"
+        app:endIconMode="password_toggle"
+        app:layout_constraintBottom_toTopOf="@+id/signUpButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUp_username_layout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/signUp_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Password"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signUpButton"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="Sign Up"
+        app:layout_constraintBottom_toTopOf="@+id/signUp_to_logIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUp_password_layout" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/signUp_to_logIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="Log In"
+        android:textColor="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+AppDB.kt
+
+package com.example.sl
+
+import androidx.room.Database
+import androidx.room.RoomDatabase
+
+@Database(entities = [User::class], version = 1)
+abstract class AppDB : RoomDatabase() {
+    abstract fun userDao(): UserDao
+}
+
+
+User.kt
+
+package com.example.sl
+
+
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity
+data class User(
+    @PrimaryKey val username: String,
+    val password: String?
+)
+
+UserDAO.kt
+
+package com.example.sl
+
+
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.Query
+
+@Dao    //Data Access object
+interface UserDao {
+    @Query("SELECT * FROM user WHERE username == :username")
+    fun getUser(username: String): User
+    @Insert
+    fun insert(user: User)
+}
+
+
+LoginActivity.kt
+
+package com.example.sl
+
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.*
+import androidx.core.view.isInvisible
+import androidx.room.Room
+import kotlinx.android.synthetic.main.login.*
+import java.lang.Exception
+
+class LoginActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.login)
+        supportActionBar?.setTitle("Log In")
+
+        val db = Room.databaseBuilder(applicationContext, AppDB::class.java, "app-database").allowMainThreadQueries().build()
+        val userDao = db.userDao()
+
+        var count = 0
+
+        logInButton.setOnClickListener {
+            try{
+                val tempUser = userDao.getUser(login_username.text.toString())
+                if(tempUser.password.equals(login_password.text.toString())){
+                    Toast.makeText(baseContext,"Login successful",Toast.LENGTH_SHORT).show()
+                    count = 0
+                }
+                else{
+
+                    if(count<3){
+                        Toast.makeText(baseContext,"Invalid Username Or Password",Toast.LENGTH_SHORT).show()
+                        count++
+
+                    }
+                    else{
+                        Toast.makeText(baseContext,"Failed, Log in disabled",Toast.LENGTH_SHORT).show()
+                        logInButton.isEnabled = false
+                    }
+                }
+            }
+            catch (e: Exception) {
+                Toast.makeText(baseContext, "Invalid Username", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        login_to_signup.setOnClickListener {
+            val intent = Intent(this, SignupActivity::class.java)
+            startActivity(intent)
+        }
+    }
+}
+
+
+SignupActivity.kt
+
+
+package com.example.sl
+
+import android.content.Intent
+import android.os.Bundle
+import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
+import androidx.room.Room
+import java.util.regex.*
+import kotlinx.android.synthetic.main.signup.*
+
+class SignupActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.signup)
+        supportActionBar?.setTitle("Sign Up")
+
+        val db = Room.databaseBuilder(applicationContext, AppDB::class.java, "app-database").allowMainThreadQueries().build()
+        val userDao = db.userDao()
+
+        signUpButton.setOnClickListener {
+            if(signUp_password.text.toString().length<8 && !isValidPassword(signUp_password.text.toString())){
+                Toast.makeText(baseContext,"Invalid Password", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                val newUser = User(signUp_username.text.toString(), signUp_password.text.toString())
+                userDao.insert(newUser)
+                Toast.makeText(baseContext,"Sign Up Sucessful", Toast.LENGTH_LONG).show()
+            }
+        }
+
+        signUp_to_logIn.setOnClickListener{
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun isValidPassword(password: String?): Boolean {
+        val pattern: Pattern
+        val matcher: Matcher
+        val PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=\\S+$).{4,}$"
+        pattern = Pattern.compile(PASSWORD_PATTERN)
+        matcher = pattern.matcher(password)
+        return matcher.matches() //0 or 1
+    }
+}
+
+AndroidManifest.xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sl">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SL">
+        <activity
+            android:name=".SignupActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity">
+            </activity>
+    </application>
+
+</manifest>
+
+
+build.gradle
+
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.example.sl"
+        minSdk 27
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    def room_version = "2.2.6"
+
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation "androidx.room:room-ktx:$room_version"
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:+'
+    implementation 'com.google.android.material:material:+'
+    implementation 'androidx.constraintlayout:constraintlayout:+'
+   // implementation 'androidx.room:room-ktx:+'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:+'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:+'
+}
+
